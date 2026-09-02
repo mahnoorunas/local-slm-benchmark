@@ -1,0 +1,260 @@
+{
+  "generated_at": "2026-09-02T21:15:54.141Z",
+  "source": "results.csv",
+  "models": [
+    {
+      "model": "llama3.2:1b",
+      "avg_tokens_per_sec": 12.74,
+      "avg_latency_s": 5.77,
+      "avg_quality": null,
+      "n": 7
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "avg_tokens_per_sec": 15.64,
+      "avg_latency_s": 6.48,
+      "avg_quality": null,
+      "n": 7
+    },
+    {
+      "model": "phi3.5",
+      "avg_tokens_per_sec": 7.29,
+      "avg_latency_s": 61.93,
+      "avg_quality": null,
+      "n": 7
+    }
+  ],
+  "rows": [
+    {
+      "model": "llama3.2:1b",
+      "prompt_id": "sum01",
+      "prompt": "Summarize in 2–3 sentences: Local language models run on your own hardware, so prompts never leave the machine. They are slower than cloud APIs on modest CPUs, but avoid per-token fees and third-party logging.",
+      "run": 1,
+      "latency_s": 15.2885,
+      "tokens": 83,
+      "tokens_per_sec": 10.44,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "llama3.2:1b",
+      "prompt_id": "code01",
+      "prompt": "Write a Python function `is_palindrome(s: str) -> bool` that ignores spaces and case. Return only the function, no explanation.",
+      "run": 1,
+      "latency_s": 3.9053,
+      "tokens": 41,
+      "tokens_per_sec": 12.36,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "llama3.2:1b",
+      "prompt_id": "qa01",
+      "prompt": "What is the capital of France? Answer in one short sentence.",
+      "run": 1,
+      "latency_s": 1.0066,
+      "tokens": 8,
+      "tokens_per_sec": 12.09,
+      "quality_score": null,
+      "keyword_hit": 1
+    },
+    {
+      "model": "llama3.2:1b",
+      "prompt_id": "reason01",
+      "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show one line of reasoning, then the answer.",
+      "run": 1,
+      "latency_s": 14.0353,
+      "tokens": 169,
+      "tokens_per_sec": 12.76,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "llama3.2:1b",
+      "prompt_id": "write01",
+      "prompt": "Write a 4-line poem about a laptop that only works offline. No title, just the poem.",
+      "run": 1,
+      "latency_s": 2.9344,
+      "tokens": 32,
+      "tokens_per_sec": 12.88,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "llama3.2:1b",
+      "prompt_id": "instr01",
+      "prompt": "Reply with exactly three bullet points, each starting with '- ', listing benefits of running AI models locally. No other text.",
+      "run": 1,
+      "latency_s": 2.4631,
+      "tokens": 26,
+      "tokens_per_sec": 13.38,
+      "quality_score": null,
+      "keyword_hit": 1
+    },
+    {
+      "model": "llama3.2:1b",
+      "prompt_id": "fact02",
+      "prompt": "Name the planet in our solar system that is known for its prominent rings. One word answer only.",
+      "run": 1,
+      "latency_s": 0.7819,
+      "tokens": 5,
+      "tokens_per_sec": 15.25,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_id": "sum01",
+      "prompt": "Summarize in 2–3 sentences: Local language models run on your own hardware, so prompts never leave the machine. They are slower than cloud APIs on modest CPUs, but avoid per-token fees and third-party logging.",
+      "run": 1,
+      "latency_s": 11.9155,
+      "tokens": 48,
+      "tokens_per_sec": 14.33,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_id": "code01",
+      "prompt": "Write a Python function `is_palindrome(s: str) -> bool` that ignores spaces and case. Return only the function, no explanation.",
+      "run": 1,
+      "latency_s": 3.3918,
+      "tokens": 42,
+      "tokens_per_sec": 14.43,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_id": "qa01",
+      "prompt": "What is the capital of France? Answer in one short sentence.",
+      "run": 1,
+      "latency_s": 0.7615,
+      "tokens": 8,
+      "tokens_per_sec": 17.34,
+      "quality_score": null,
+      "keyword_hit": 1
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_id": "reason01",
+      "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show one line of reasoning, then the answer.",
+      "run": 1,
+      "latency_s": 18.7642,
+      "tokens": 269,
+      "tokens_per_sec": 14.93,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_id": "write01",
+      "prompt": "Write a 4-line poem about a laptop that only works offline. No title, just the poem.",
+      "run": 1,
+      "latency_s": 2.7919,
+      "tokens": 36,
+      "tokens_per_sec": 15.92,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_id": "instr01",
+      "prompt": "Reply with exactly three bullet points, each starting with '- ', listing benefits of running AI models locally. No other text.",
+      "run": 1,
+      "latency_s": 7.1549,
+      "tokens": 86,
+      "tokens_per_sec": 12.95,
+      "quality_score": null,
+      "keyword_hit": 1
+    },
+    {
+      "model": "qwen2.5:1.5b",
+      "prompt_id": "fact02",
+      "prompt": "Name the planet in our solar system that is known for its prominent rings. One word answer only.",
+      "run": 1,
+      "latency_s": 0.6088,
+      "tokens": 3,
+      "tokens_per_sec": 19.56,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "phi3.5",
+      "prompt_id": "sum01",
+      "prompt": "Summarize in 2–3 sentences: Local language models run on your own hardware, so prompts never leave the machine. They are slower than cloud APIs on modest CPUs, but avoid per-token fees and third-party logging.",
+      "run": 1,
+      "latency_s": 29.0981,
+      "tokens": 62,
+      "tokens_per_sec": 8,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "phi3.5",
+      "prompt_id": "code01",
+      "prompt": "Write a Python function `is_palindrome(s: str) -> bool` that ignores spaces and case. Return only the function, no explanation.",
+      "run": 1,
+      "latency_s": 20.4291,
+      "tokens": 150,
+      "tokens_per_sec": 7.9,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "phi3.5",
+      "prompt_id": "qa01",
+      "prompt": "What is the capital of France? Answer in one short sentence.",
+      "run": 1,
+      "latency_s": 2.223,
+      "tokens": 8,
+      "tokens_per_sec": 7.1,
+      "quality_score": null,
+      "keyword_hit": 1
+    },
+    {
+      "model": "phi3.5",
+      "prompt_id": "reason01",
+      "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show one line of reasoning, then the answer.",
+      "run": 1,
+      "latency_s": 350.7056,
+      "tokens": 2124,
+      "tokens_per_sec": 6.09,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "phi3.5",
+      "prompt_id": "write01",
+      "prompt": "Write a 4-line poem about a laptop that only works offline. No title, just the poem.",
+      "run": 1,
+      "latency_s": 18.3893,
+      "tokens": 97,
+      "tokens_per_sec": 6.12,
+      "quality_score": null,
+      "keyword_hit": 0
+    },
+    {
+      "model": "phi3.5",
+      "prompt_id": "instr01",
+      "prompt": "Reply with exactly three bullet points, each starting with '- ', listing benefits of running AI models locally. No other text.",
+      "run": 1,
+      "latency_s": 11.2076,
+      "tokens": 59,
+      "tokens_per_sec": 6.21,
+      "quality_score": null,
+      "keyword_hit": 1
+    },
+    {
+      "model": "phi3.5",
+      "prompt_id": "fact02",
+      "prompt": "Name the planet in our solar system that is known for its prominent rings. One word answer only.",
+      "run": 1,
+      "latency_s": 1.4595,
+      "tokens": 4,
+      "tokens_per_sec": 9.6,
+      "quality_score": null,
+      "keyword_hit": 1
+    }
+  ]
+}

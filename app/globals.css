@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-void text-ink antialiased overflow-x-hidden;
+  background-image:
+    radial-gradient(ellipse 90% 60% at 15% -20%, rgba(94, 234, 212, 0.12), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 95% 10%, rgba(240, 180, 41, 0.08), transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(42, 155, 143, 0.07), transparent 60%),
+    linear-gradient(180deg, #070b12 0%, #0a101a 50%, #070b12 100%);
+  min-height: 100vh;
+}
+
+/* Soft lab grid */
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(94, 234, 212, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94, 234, 212, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, black, transparent);
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: rgba(94, 234, 212, 0.35);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .motion-safe-fade,
+  .motion-delay-1,
+  .motion-delay-2,
+  .motion-delay-3,
+  .motion-delay-4,
+  .orb,
+  .shimmer-btn {
+    animation: none !important;
+  }
+}
+
+.motion-safe-fade {
+  @apply animate-rise-in;
+}
+.motion-delay-1 {
+  animation-delay: 90ms;
+}
+.motion-delay-2 {
+  animation-delay: 180ms;
+}
+.motion-delay-3 {
+  animation-delay: 270ms;
+}
+.motion-delay-4 {
+  animation-delay: 360ms;
+}
+
+.orb {
+  @apply pointer-events-none absolute rounded-full blur-3xl animate-float animate-pulse-glow;
+}
+
+.panel-glass {
+  @apply border border-line/80 bg-panel/70 backdrop-blur-md;
+  box-shadow: inset 0 1px 0 rgba(94, 234, 212, 0.06);
+}
+
+.panel-hover {
+  @apply transition-all duration-300 ease-out;
+}
+.panel-hover:hover {
+  @apply border-cyan/30 shadow-glow-sm -translate-y-0.5;
+}
+
+.shimmer-btn {
+  background-image: linear-gradient(
+    110deg,
+    #2a9b8f 0%,
+    #5eead4 40%,
+    #a7f3e8 50%,
+    #5eead4 60%,
+    #2a9b8f 100%
+  );
+  background-size: 200% 100%;
+  @apply animate-shimmer text-void;
+}
+
+.prose-tradeoffs h1 {
+  @apply font-display text-3xl md:text-4xl font-bold tracking-tight text-ink mb-4;
+}
+.prose-tradeoffs h2 {
+  @apply font-display text-xl font-bold text-cyan mt-10 mb-3 border-b border-line pb-2;
+}
+.prose-tradeoffs p {
+  @apply font-body text-base leading-relaxed text-mist mb-4;
+}
+.prose-tradeoffs ul {
+  @apply list-disc pl-5 mb-4 space-y-2 font-body text-mist;
+}
+.prose-tradeoffs li {
+  @apply leading-relaxed;
+}
+.prose-tradeoffs strong {
+  @apply font-semibold text-ink;
+}
+.prose-tradeoffs code {
+  @apply font-mono text-sm bg-panel px-1.5 py-0.5 rounded text-cyan border border-line;
+}
+.prose-tradeoffs table {
+  @apply w-full text-xs sm:text-sm font-mono mb-6 border-collapse min-w-[28rem];
+}
+.prose-tradeoffs th {
+  @apply text-left border-b-2 border-cyan/30 py-2 pr-3 text-cyan whitespace-nowrap;
+}
+.prose-tradeoffs td {
+  @apply border-b border-line py-2 pr-3 align-top text-mist;
+}
+.prose-tradeoffs pre {
+  @apply font-mono text-xs sm:text-sm bg-panel text-cyan border border-line p-3 sm:p-4 rounded-lg mb-4 overflow-x-auto max-w-full;
+}
+.prose-tradeoffs {
+  overflow-wrap: anywhere;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@media (hover: none) {
+  .panel-hover:hover {
+    transform: none;
+    box-shadow: inset 0 1px 0 rgba(94, 234, 212, 0.06);
+  }
+}
+.prose-tradeoffs a {
+  @apply text-cyan underline-offset-2 hover:underline;
+}

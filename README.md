@@ -46,12 +46,12 @@ python plot_results.py
 
 ## Portfolio site (Next.js)
 
-Static App Router site (`output: "export"`). Reads **only** `data/results.json` and `TRADEOFFS.md` — never calls Ollama or any paid API.
+App Router site. Pages are generated as **static** at build time. Reads **only** `data/results.json` and `TRADEOFFS.md` — never calls Ollama or any paid API.
 
 ```bash
 npm install
 npm run dev      # regenerates JSON from results.csv, then next dev
-npm run build    # static export → out/
+npm run build    # Next.js production build (Vercel-ready)
 ```
 
 Pages:
@@ -62,12 +62,14 @@ Pages:
 
 ### Deploy on Vercel (free)
 
-1. Push this repo to GitHub.
-2. Import the repo in Vercel (framework: Next.js; root directory: repo root).
-3. Build command: `npm run build` (runs `prebuild` → `scripts/csv-to-json.mjs`).
-4. Output: static export under `out/` — no env vars, no backend, no secrets.
+1. Push this repo to GitHub and import it in Vercel (**Framework Preset: Next.js**, root = repo root).
+2. Build command: `npm run build` (runs `prebuild` → `scripts/csv-to-json.mjs`).
+3. **Leave Output Directory empty** — do not set it to `out`. Vercel uses the Next.js builder (`.next`), not a static-export folder.
+4. No env vars or secrets needed.
 
-Commit `results.csv` (and optionally `data/results.json`) so the build has data; `prebuild` regenerates JSON from the CSV on every deploy.
+If you previously set Output Directory to `out`, clear it and redeploy — that mismatch is a common cause of `404: NOT_FOUND`.
+
+Commit `results.csv` so the build has data; `prebuild` regenerates `data/results.json` on every deploy.
 
 ## Output artifacts
 
@@ -75,4 +77,3 @@ Commit `results.csv` (and optionally `data/results.json`) so the build has data;
 - `data/results.json` — site data (generated)
 - `results/*.png` — matplotlib charts from the Python path
 - `TRADEOFFS.md` — privacy / latency / cost / quality-vs-speed
-- `out/` — static site after `npm run build`

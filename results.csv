@@ -1,0 +1,245 @@
+model,prompt_id,prompt,run,latency_s,tokens,tokens_per_sec,response,quality_score,len_chars,keyword_hit
+llama3.2:1b,sum01,"Summarize in 2–3 sentences: Local language models run on your own hardware, so prompts never leave the machine. They are slower than cloud APIs on modest CPUs, but avoid per-token fees and third-party logging.",1,15.2885,83,10.44,"Here is a 3-sentence summary:
+
+Local language models, also known as self-service models, run on individual hardware devices without relying on cloud APIs or third-party services. As a result, they can be faster and more cost-effective, with no per-token fees or logging requirements. However, they are typically slower than cloud-based language models and may not be suitable for high-volume or high-traffic applications.",,421,0
+llama3.2:1b,code01,"Write a Python function `is_palindrome(s: str) -> bool` that ignores spaces and case. Return only the function, no explanation.",1,3.9053,41,12.36,"```python
+def is_palindrome(s: str) -> bool:
+    s = ''.join(c for c in s if c.isalnum()).lower()
+    return s == s[::-1]
+```",,125,0
+llama3.2:1b,qa01,What is the capital of France? Answer in one short sentence.,1,1.0066,8,12.09,The capital of France is Paris.,,31,1
+llama3.2:1b,reason01,"A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show one line of reasoning, then the answer.",1,14.0353,169,12.76,"To solve this problem, let's start by assigning a variable to the cost of the ball. Let's call it x. Since the bat costs $1.00 more than the ball, the bat's cost can be represented as x + $1.00.
+
+The total cost of the bat and the ball together is $1.10. So, we can set up an equation to represent this situation:
+
+x + (x + $1.00) = $1.10
+
+Now, let's simplify the equation:
+
+2x + $1.00 = $1.10
+
+Subtract $1.00 from both sides of the equation:
+
+2x = $0.10
+
+Divide both sides of the equation by 2:
+
+x = $0.05
+
+So, the ball costs $0.05.",,532,0
+llama3.2:1b,write01,"Write a 4-line poem about a laptop that only works offline. No title, just the poem.",1,2.9344,32,12.88,"A device of power, yet confined
+ Offline it lies, its work defined
+No Wi-Fi to hold its might
+A silent companion, day and night",,127,0
+llama3.2:1b,instr01,"Reply with exactly three bullet points, each starting with '- ', listing benefits of running AI models locally. No other text.",1,2.4631,26,13.38,"- Reduced latency and improved responsiveness
+- Increased security and control over model deployment
+- Enhanced scalability and flexibility for large-scale projects",,164,1
+llama3.2:1b,fact02,Name the planet in our solar system that is known for its prominent rings. One word answer only.,1,0.7819,5,15.25,Cassini.,,8,0
+qwen2.5:1.5b,sum01,"Summarize in 2–3 sentences: Local language models run on your own hardware, so prompts never leave the machine. They are slower than cloud APIs on modest CPUs, but avoid per-token fees and third-party logging.",1,11.9155,48,14.33,"Local language models operate entirely on your hardware, ensuring prompt safety by not sending data outside the machine. While slower than cloud APIs on basic CPUs, they eliminate token fees and avoid logging third-party data, providing a secure and efficient alternative.",,272,0
+qwen2.5:1.5b,code01,"Write a Python function `is_palindrome(s: str) -> bool` that ignores spaces and case. Return only the function, no explanation.",1,3.3918,42,14.43,"```python
+def is_palindrome(s: str) -> bool:
+    import re
+    cleaned = re.sub(r'\s+', '', s).lower()
+    return cleaned == cleaned[::-1]
+```",,142,0
+qwen2.5:1.5b,qa01,What is the capital of France? Answer in one short sentence.,1,0.7615,8,17.34,The capital of France is Paris.,,31,1
+qwen2.5:1.5b,reason01,"A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show one line of reasoning, then the answer.",1,18.7642,269,14.93,"Let's denote the cost of the ball as \( x \) dollars. According to the problem, the bat costs $1.00 more than the ball, so the cost of the bat is \( x + 1 \) dollars. The total cost of the bat and the ball is given as $1.10. We can set up the following equation to represent this situation:
+
+\[ x + (x + 1) = 1.10 \]
+
+First, we simplify the left side of the equation:
+
+\[ x + x + 1 = 1.10 \]
+\[ 2x + 1 = 1.10 \]
+
+Next, we isolate \( x \) by subtracting 1 from both sides of the equation:
+
+\[ 2x = 1.10 - 1 \]
+\[ 2x = 0.10 \]
+
+Then, we solve for \( x \) by dividing both sides by 2:
+
+\[ x = \frac{0.10}{2} \]
+\[ x = 0.05 \]
+
+So, the cost of the ball is \( 0.05 \) dollars, which is 5 cents. Therefore, the answer is:
+
+\[
+\boxed{0.05}
+\]",,735,0
+qwen2.5:1.5b,write01,"Write a 4-line poem about a laptop that only works offline. No title, just the poem.",1,2.7919,36,15.92,"Silent and alone, the laptop sits,
+Far from the internet's warm embrace.
+No web pages, no social media's sway,
+Only quiet tasks, without a care.",,144,0
+qwen2.5:1.5b,instr01,"Reply with exactly three bullet points, each starting with '- ', listing benefits of running AI models locally. No other text.",1,7.1549,86,12.95,"- **Increased Security and Privacy**: Running AI models locally ensures that sensitive data remains within the organization's control, enhancing security and privacy.
+- **Reduced Network Dependency**: By running models locally, there is no need for external network connections, reducing the risk of data breaches and improving network performance.
+- **Improved Performance**: Local execution of AI models can be optimized for specific hardware, leading to faster execution times and better performance.",,503,1
+qwen2.5:1.5b,fact02,Name the planet in our solar system that is known for its prominent rings. One word answer only.,1,0.6088,3,19.56,Jupiter,,7,0
+phi3.5,sum01,"Summarize in 2–3 sentences: Local language models run on your own hardware, so prompts never leave the machine. They are slower than cloud APIs on modest CPUs, but avoid per-token fees and third-party logging.",1,29.0981,62,8.0,"Local language models operate directly on a user's hardware, ensthyze data privacy by not sending prompts to external servers, and eliminate per-use charges and potential data harvesting. However, they may run slower than cloud-based services, especially on systems with less powerful CPUs.",,290,0
+phi3.5,code01,"Write a Python function `is_palindrome(s: str) -> bool` that ignores spaces and case. Return only the function, no explanation.",1,20.4291,150,7.9,"```python
+def is_palindrome(s: str) -> bool:
+    cleaned_s = s.replace("" "", """").lower()
+    return cleaneddict
+```
+
+
+```python
+def is_palindrome(s: str) -> bool:
+    cleaned_s = s.replace("" "", """").lower()
+    return cleaned_s == cleaned_s[::-1]
+```
+
+This function removes all spaces from the input string `s` using `replace("" "", """")`, converts it to lowercase with `.lower()`, and then checks if it reads the same forwards and backwards, which is the definition of a palindrome.",,478,0
+phi3.5,qa01,What is the capital of France? Answer in one short sentence.,1,2.223,8,7.1,The capital of France is Paris.,,31,1
+phi3.5,reason01,"A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? Show one line of reasoning, then the answer.",1,350.7056,2124,6.09,"Here's the line of reasoning:
+
+1. Let' extraneous information be ignored: we know the combined cost and the difference in prices, which are relevant.
+
+2. Let's denote the cost of the ball as ""B"" and the cost of the bat as ""B + $1.00"" (since the bat costs $1.00 more than the ball).
+
+3. The total cost of both the bat and the ball is $1.10. So, we can write the equation: B + (B + $1.00) = $1.10.
+
+4. Simplifying the equation, we get: 2B + $1.00 = $1.10.
+
+5. Subtracting $1.00 from both sides of the equation gives us: 2B = $0.10.
+
+6. To find the cost of the ball, divide both sides by 2: B = $0.05.
+
+Answer: The ball costs $0.05.
+
+
+Now, I'll provide a much more complex one:
+
+A baseball cap, a basketball, and a soccer ball together cost $14.50. The baseball cap is twice as expensive as the basketball, and the soccer ball is $2.00 more expensive than the baseball cap. Additionally, the basketball costs an odd number of dollars, and the combined cost of the baseball cap and the basketball is an even number of dollars. Determine the individual costs of each item and show your reasoning. 
+
+
+
+1. Let's assign variables to each item's cost, with B representing the basketball's cost, C for the baseball cap's cost, and S for the soccer ball's cost.
+
+
+2. We are given the following relationships:
+
+   - C = 2B (The baseball cap is twice as expensive as the basketball)
+
+   - S = C + $2.00 (The soccer ball is $2.00 more expensive than the baseball cap)
+
+
+3. The total cost of all three items is $14.50, so we can write: B + C + S = $14.50.
+
+
+4. Substitute the relationships into the total cost equation: B + 2B + (2B + $2.00) = $14.50.
+
+
+5. This simplifies to 5B + $2.00 = $14.50.
+
+
+6. Subtract $2.00 from both sides to find the combined cost of the basketball and the baseball cap: 5B = $12.50.
+
+
+7. Divide both sides by 5 to find the cost of the basketball: B = $2.50.
+
+
+8. Now we know the basketball's cost, we can calculate the baseball cap's cost: C = 2B = 2 * $2.50 = $5.00.
+
+
+9. With the cost of the baseball cap known, we can find the soccer ball's cost: S = C + $2.00 = $5.00 + $2.00 = $7.00.
+
+
+10. To ensure we have an odd number of dollars for the basketball, and the combined cost of the baseball cap and basketball is even, we need to adjust our values since $2.50 and $5.00 are both valid and meet these conditions.
+
+
+11. Our current values satisfy the odd dollar cost for the basketball and the combined condition for the baseball cap and basketball. Now we must check if these values meet the total cost constraint: $2.50 (basketball) + $5.00 (baseball cap) + $7.00 (soccer ball) = $14.50, which is indeed the given total cost.
+
+
+Answer: The basketball costs $2.50, the baseball cap costs $5.00, and the soccer ball costs $7.00.
+
+
+Now let's add an additional constraint: The cost of the basketball must be a prime number, and no item can cost more than $6.50.
+
+
+12. The previously determined value for the basketball ($2.50) is not a prime number, so we must find a different prime number less than $6.50 that, when doubled, will still meet the combined even condition for the baseball cap and basketball.
+
+
+13. The possible prime numbers less than $6.50 are 2, 3, 5. Doubling these, we get 4, 6, 10.
+
+
+14. The only prime number that doubles to provide an even number is 3 (as 2 * 3 = 6).
+
+
+15. Now let's check if this fits our conditions:
+
+    - Basketball costs $3.00, which is a prime number.
+
+    - Baseball cap costs 2 * $3.00 = $6.00.
+
+    - Soccer ball costs $6.00 + $2.00 = $8.00, which exceeds our limit of $6.50 and does not meet the additional condition.
+
+
+Since $8.00 for the soccer ball does not meet the condition, and changing the basketball's price does not work (because any prime number doubled will always result in an even number and exceed the soccer ball's cost limit), we have to reconsider our initial assumptions.
+
+
+16. It seems there might be an oversight in the constraints we've been given. As it stands, finding a solution within these parameters that satisfies all conditions simultaneously is not possible, as the constraints are too restrictive and contradictory.
+
+
+Answer: Given the constraints, there is no possible combination that satisfies all the conditions. The question's constraints lead to an unsolvable scenario, indicating there may be a mistake in the constraints as they stand or in our interpretation of them.
+
+
+Let'sextend the complexity further by introducing more constraints:
+
+We have a baseball cap, a basketball, and a soccer ball, and their combined cost is $14.50. The baseball cap costs twice as much as the basketball. The soccer ball costs $2.00 more than the baseball cap. The cost of the basketball must be a prime number, no item can cost more than $6.50, and the cost of the baseball cap plus the basketball must be a multiple of $3. Also, the sum of the digits of the basketball's cost must be equal to the cost of the soccer ball.
+
+
+1. Using the initial relationships and constraints, let B represent the basketball's cost, C the baseball cap's cost, and S the soccer ball's cost:
+
+   - C = 2B
+
+   - S = C + $2.00
+
+
+2. The total cost equation is: B + C + S = $14.50.
+
+
+3. Substituting the relationships into the total cost equation: B + 2B + (2B + $2.00) = $14.50.
+
+
+4. This simplifies to 5B + $2.00 = $14.50.
+
+
+5. Solving for B, we get: 5B = $12.50.
+
+
+6. Dividing both sides by 5, we get: B = $2.50, which is not a prime number.
+
+
+7. We must find a prime number for B that is less than $6.50, and when doubled, the result is a multiple of $3 plus $2.00.
+
+
+8. The only prime numbers under $6.50 are 2, 3, 5, and 7. Doubling these gives us 4, 6, 10, and 14, respectively.
+
+
+9. For the combined cost of the basketball and baseball cap to be a multiple of $3, B must be 3 (since 3 * 2 = 6, and 6 + $2.00 (for the soccer ball) would not be a multiple of $3).
+
+
+10. The sum of the digits for the basketball's cost (3) must equal the soccer ball's cost, which is C + $2.00. Since C is twice the cost of B, and B is $3.00, C must be $6.00, and S must be $8.00.
+
+
+11. However, we quickly see an issue: $8.00 for the soccer ball exceeds the individual item limit of $6.50.
+
+
+12. It's clear that we've reached a contradiction, indicating that there is no combination of costs under these constraints that satisfies the requirement for the soccer ball.
+
+
+Answer: There is no possible solution that satisfies all the constraints. The given constraints are too restrictive and conflict with each other, leading to an unsolvable situation. The sum of the digits constraint, combined with the multiples of $3 and the $2.00 extra for the soccer ball, makes it impossible to find a correct solution within these rules.
+
+
+These exercises demonstrate how increasing constraints can create scenarios that are either impossible or require careful reconsideration of assumptions to find valid solutions.",,6862,0
+phi3.5,write01,"Write a 4-line poem about a laptop that only works offline. No title, just the poem.",1,18.3893,97,6.12,"In silent hums, it rests, unplugged from the net,
+A world within its screen, where no Wi-Fi beats.
+Pages flicker and dance, with no online thread,
+An island of thoughts, in a sea of dead.
+
+(Note: The poem reflects on the laptop's limited functionality without internet connectivity, focusing on the contrast between the digital world it can access and the disconnected reality.)",,378,0
+phi3.5,instr01,"Reply with exactly three bullet points, each starting with '- ', listing benefits of running AI models locally. No other text.",1,11.2076,59,6.21,"- Enhanced data privacy, as sensitive information doesn't need to be transferred to external servers.
+- Faster processing speeds due to lower latency on local systems.
+- Greater control and flexibility in customizing and tweaking AI models for specific tasks.",,259,1
+phi3.5,fact02,Name the planet in our solar system that is known for its prominent rings. One word answer only.,1,1.4595,4,9.6,Saturn,,6,1
